@@ -137,6 +137,10 @@ footer {
     flex-wrap: nowrap;
 }
 
+.footerSection:not(:last-child) {
+    margin-right: 20px;
+}
+
 .footerSection h4 {
     margin-bottom: 10px;
 }
@@ -177,7 +181,7 @@ footer a {
     }
 
     .footerSection:not(:last-child) {
-        padding-right: 0px;
+        margin-right: 0px;
         padding-bottom: 10px;
     }
 }
