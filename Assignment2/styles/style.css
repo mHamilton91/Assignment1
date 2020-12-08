@@ -1,0 +1,184 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,body,#content { min-height: 100%; }
+
+body {
+    background-color: #888;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content {
+    background-color: #fff;
+    max-width: 910px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+/*--------------------HEADER--------------------*/
+header {
+    background-image: url("../images/sky.jpeg");
+    background-color: #30396D;
+    height: 429px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+nav {
+    float: right;
+    padding: 5px 0;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #fff;
+    padding: 0 10px;
+}
+
+#headerInfo {
+    clear: both;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#headerInfo h1 {
+    font-size: 3.5em;
+    padding-bottom: 35px;
+    font-weight: 100;
+}
+
+#headerInfo h3 { font-size: 1.5em; }
+
+/*------------------HEADER END------------------*/
+
+/*-----------------------MAIN INFO----------------------*/
+#mainInfo {
+    padding: 15px 20px 0 20px;
+    display: flex;
+}
+
+/*--------------------ARTICLE-------------------*/
+article {
+    flex: 0 1 auto;
+    padding-right: 30px;
+}
+
+article > * { padding-bottom: 15px;}
+
+.ideas h3 { padding-bottom: 15px; }
+
+blockquote {
+    border: 1px solid #000;
+    max-width: 330px;
+    padding: 20px; 
+    margin: 20px auto 0 auto;
+    overflow: hidden; /*Why does this fix the float right outside parent element issues*/
+}
+
+#citeName { float: right; }
+
+.heading {
+    color: #30396D;
+    padding-bottom: 15px; 
+}
+/*------------------ARTICLE END-----------------*/
+
+/*---------------------ASIDE--------------------*/
+aside { padding-left: 15px; }
+
+aside > div {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #000;
+}
+
+#categories ul { margin-left: 18px; }
+
+#categories ul a { color: #000; }
+
+.tag {
+    display: inline-block;
+    border: 1px solid #000;
+    color: #000;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 3px;
+    margin: 3px 0;
+}
+
+#featureImg img{
+    height: 130px;
+    width: auto;
+    padding: 2px;
+    border: 1.5px solid #000;
+}
+/*-------------------ASIDE END------------------*/
+/*---------------------MAIN INFO END--------------------*/
+
+/*---------------------FOOTER-------------------*/
+footer {
+    background-color: #30396D;
+    color: #FFF;
+    padding: 30px 20px;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.footerSection h4 {
+    margin-bottom: 10px;
+}
+
+.footerSection p {
+    margin-bottom: 5px;
+}
+
+footer a {
+    display: block;
+    color: #FFF;
+    text-decoration: none;
+    border: 1.5px solid #FFF;
+    padding: 7px;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+/*------------------FOOTER END------------------*/
+
+/*-----------------MEDIA QUERIES----------------*/
+@media only screen and (max-width: 1350px) {
+    #mainInfo {
+        flex-direction: column;
+    }
+
+    aside {
+        border-top: 2px solid #000;
+        padding-top: 20px;
+        padding-left: 5px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    footer {
+        flex-direction: column;
+    }
+
+    .footerSection:not(:last-child) {
+        padding-right: 0px;
+        padding-bottom: 10px;
+    }
+}
+/*---------------MEDIA QUERIES END--------------*/
