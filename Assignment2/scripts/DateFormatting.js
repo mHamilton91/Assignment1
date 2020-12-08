@@ -30,7 +30,8 @@ var DateFormatter = {
 
     getExtendedDateTime : function(date) {
         var dateFull = date.toLocaleString('defualt', {dateStyle : 'full'})
-        return dateFull
+        var timeFull = date.toLocaleString('defualt', {timeStyle : 'short'})
+        return `${dateFull} ${timeFull}`
     }
 }
 
